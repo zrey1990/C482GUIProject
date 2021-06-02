@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorMain" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mainController">
+    <children>
+        <AnchorPane layoutX="21.0" layoutY="53.0" prefHeight="240.0" prefWidth="410.0" style="-fx-border-color: black; -fx-border-radius: 20;">
+            <children>
+                <Button fx:id="addingPart" layoutX="196.0" layoutY="196.0" mnemonicParsing="false" onMouseClicked="#addPartClicked" prefHeight="25.0" prefWidth="54.0" text="Add">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Button>
+                <Button fx:id="modifyingPart" layoutX="261.0" layoutY="196.0" mnemonicParsing="false" onMouseClicked="#modifyPartClicked" text="Modify">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Button>
+                <Button fx:id="deletingPart" layoutX="338.0" layoutY="196.0" mnemonicParsing="false" onMouseClicked="#deletingPartClicked" text="Delete">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Button>
+                <Label fx:id="labelingParts" layoutX="14.0" layoutY="21.0" text="Parts">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font></Label>
+                <TextField fx:id="textfieldSearchForPart" layoutX="269.0" layoutY="22.0" onKeyTyped="#searchingForPartChanged" prefHeight="25.0" prefWidth="129.0" promptText="Search by PartID" />
+                <TableView fx:id="tableviewParts" layoutX="14.0" layoutY="51.0" prefHeight="135.0" prefWidth="383.0">
+                    <columns>
+                        <TableColumn fx:id="tablePartID" prefWidth="54.0" text="Part ID" />
+                        <TableColumn fx:id="tablePartName" prefWidth="100.0" text="Part Name" />
+                        <TableColumn fx:id="tableInvLvlPart" prefWidth="97.0" text="Inventory Level" />
+                        <TableColumn fx:id="tableCostPart" prefWidth="129.0" text="Price/Cost per Unit" />
+                    </columns>
+                </TableView>
+                <Button fx:id="buttonForPartSearching" layoutX="269.0" layoutY="22.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" text="Search Parts" visible="false" />
+                <Label fx:id="labelPartSearchResults" layoutX="269.0" layoutY="26.0" prefHeight="17.0" prefWidth="129.0" text="No Matching Part" textFill="RED" visible="false">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Button fx:id="buttonToExit" layoutX="764.0" layoutY="301.0" mnemonicParsing="false" onMouseClicked="#exitClicked" prefHeight="30.0" prefWidth="64.0" text="Exit">
+            <font>
+                <Font size="14.0" />
+            </font></Button>
+        <Label layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="208.0" text="Inventory Management System">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="445.0" layoutY="53.0" prefHeight="240.0" prefWidth="410.0" style="-fx-border-color: black; -fx-border-radius: 20;">
+            <children>
+                <Button fx:id="buttonToAddProduct" layoutX="184.0" layoutY="200.0" mnemonicParsing="false" onMouseClicked="#addProductClicked" prefHeight="25.0" prefWidth="64.0" text="Add">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Button>
+                <Button fx:id="buttonToModifyProduct" layoutX="260.0" layoutY="200.0" mnemonicParsing="false" onMouseClicked="#modifyProductClicked" text="Modify">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Button>
+                <Button fx:id="buttonToDeleteProduct" layoutX="337.0" layoutY="200.0" mnemonicParsing="false" onMouseClicked="#deletingProductClicked" text="Delete">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Button>
+                <Label fx:id="labelingAllProducts" layoutX="14.0" layoutY="21.0" text="Products">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="textfieldSearchForProduct" layoutX="268.0" layoutY="20.0" onAction="#searchingForProductChanged" onKeyTyped="#searchingForProductChanged" prefHeight="25.0" prefWidth="129.0" promptText="Search by Product ID" />
+                <TableView fx:id="tablieviewProducts" layoutX="14.0" layoutY="55.0" prefHeight="135.0" prefWidth="383.0">
+                    <columns>
+                        <TableColumn fx:id="tableProductID" prefWidth="69.0" resizable="false" text="Product ID" />
+                        <TableColumn fx:id="tableProductName" prefWidth="104.0" resizable="false" text="Product Name" />
+                        <TableColumn fx:id="tableInvLvlProduct" prefWidth="113.0" text="Inventory Level" />
+                        <TableColumn fx:id="tableCostProduct" prefWidth="114.0" text="Price/Cost per Unit" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+                <Button fx:id="buttonForProductSearch" layoutX="269.0" layoutY="22.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="129.0" text="Search Products" visible="false" />
+                <Label fx:id="labelProductSearchResults" layoutX="269.0" layoutY="18.0" prefHeight="25.0" prefWidth="129.0" text="No Matching Product" textFill="RED" visible="false">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

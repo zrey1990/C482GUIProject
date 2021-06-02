@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorAddPart" prefHeight="478.0" prefWidth="347.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.addPartController">
+    <Label layoutX="11.0" layoutY="14.0" text="Add Part">
+        <font>
+            <Font name="System Bold" size="14.0" />
+        </font>
+    </Label>
+    <Label layoutX="24.0" layoutY="60.0" text="ID" />
+    <Label layoutX="24.0" layoutY="98.0" text="Name" />
+    <Label layoutX="24.0" layoutY="132.0" text="Inventory" />
+    <Label layoutX="24.0" layoutY="168.0" text="Price/Cost" />
+    <Label layoutX="24.0" layoutY="203.0" text="Max" />
+    <Label fx:id="addPartMachineID" layoutX="24.0" layoutY="240.0" text="Machine ID" />
+    <Label layoutX="192.0" layoutY="203.0" text="Min" />
+    <RadioButton fx:id="addPartInHouse" layoutX="106.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#inHouseClicked" selected="true" text="In-House" />
+    <RadioButton fx:id="addPartOutsourced" layoutX="214.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#outsourcedClicked" text="Outsourced" />
+    <TextField fx:id="partID" disable="true" layoutX="117.0" layoutY="56.0" prefHeight="25.0" prefWidth="170.0" text="Auto Gen - Disabled" />
+    <TextField fx:id="addPartName" layoutX="117.0" layoutY="94.0" prefHeight="25.0" prefWidth="170.0" />
+    <TextField fx:id="addPartInventory" layoutX="117.0" layoutY="128.0" prefHeight="25.0" prefWidth="170.0" text="0" />
+    <TextField fx:id="addPartPrice" layoutX="117.0" layoutY="164.0" prefHeight="25.0" prefWidth="170.0" />
+    <TextField fx:id="addPartMax" layoutX="117.0" layoutY="199.0" prefHeight="25.0" prefWidth="61.0" />
+    <TextField fx:id="addThePartMachineID" layoutX="117.0" layoutY="236.0" prefHeight="25.0" prefWidth="170.0" />
+    <TextField fx:id="addPartMin" layoutX="225.0" layoutY="199.0" prefHeight="25.0" prefWidth="61.0" />
+    <Button fx:id="addPartSave" layoutX="182.0" layoutY="286.0" mnemonicParsing="false" onMouseClicked="#partSaveClicked" text="Save" />
+    <Button fx:id="addPartCancel" layoutX="234.0" layoutY="286.0" mnemonicParsing="false" onMouseClicked="#partCancelClicked" text="Cancel" />
+    <Label fx:id="addPartCompanyName" layoutX="24.0" layoutY="240.0" text="Company Name" visible="false" />
+    <TextField fx:id="addPartCompany" disable="true" layoutX="117.0" layoutY="236.0" prefHeight="25.0" prefWidth="170.0" visible="false" />
+</AnchorPane>
